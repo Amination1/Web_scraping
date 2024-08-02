@@ -11,13 +11,13 @@ if(!empty($dom)) {
         foreach($divClass->find(".site-address") as $title ) {
             $answer[$i]['title'] = $title->plaintext;
         }
-        foreach($divClass->find(".site-number") as $ipl_ratings_bar ) {
-            $answer[$i]['rank'] = trim($ipl_ratings_bar->plaintext);
+        foreach($divClass->find(".site-number") as $ranking ) {
+            $answer[$i]['rank'] = trim($ranking->plaintext);
         }
         foreach($divClass->find('.site-title') as $desc) {
             $text = html_entity_decode($desc->plaintext);
             $text = preg_replace('/\'/', "`", $text);
-            $answer[$i]['content'] = html_entity_decode($text);
+            $answer[$i]['site'] = html_entity_decode($text);
         }
         $i++;
     }

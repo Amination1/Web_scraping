@@ -26,7 +26,7 @@
         echo "<tr>";
         echo "<td>" . $rank->title . "</td>";
         echo "<td>" . $rank->rank . "</td>";
-        echo "<td style='text-align: left'>" . $rank->content . "</td>";
+        echo "<td style='text-align: left'>" . $rank->site . "</td>";
         echo "</tr>";
     }
     ?>
